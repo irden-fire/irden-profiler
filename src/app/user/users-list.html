@@ -1,0 +1,66 @@
+<div class="card-container">
+    <md-card>
+        <md-card [heading]="User.name" *ngFor="let user of Users"
+                        (click)="selected.emit(user)">
+        <md-card-title>Покупка: {{user.name}}</md-card-title>
+        <md-card-content>
+            <ul class="list-inline">
+              <li *ngFor="let tag of user.tags">
+                <span class="label label-warning">
+                  #{{tag.name}}
+                </span>
+              </li>
+            </ul>
+            <div>
+              {{User.user}}
+            </div>
+            <div>
+              {{User.cost}}
+            </div>
+            <div>
+              {{User.description}}
+            </div>
+            <div>
+              {{User.date}}
+            </div>
+            <div>
+              <button class="btn btn-danger" type="submit" (click)="deleted.emit(User); $event.stopPropagation();"
+              >
+                <i>Удалить</i>
+              </button>
+            </div>
+        </md-card-content>
+        </md-card>
+    </md-card>
+</div>
+
+<!--div *ngFor="let User of Users" (click)="selected.emit(User)"
+  class="recipe-card">
+  <div>
+    <h2>{{User.name}}</h2>
+  </div>
+  <ul class="list-inline">
+    <li *ngFor="let tag of User.tags">
+      <span class="label label-warning">
+        #{{tag.name}}
+      </span>
+    </li>
+  </ul>
+  <div>
+    {{User.user}}
+  </div>
+  <div>
+    {{User.cost}}
+  </div>
+  <div>
+    {{User.description}}
+  </div>
+  <div>
+    {{User.date}}
+  </div>
+  <div>
+    <button (click)="deleted.emit(User); $event.stopPropagation();">
+      <i>close</i>
+    </button>
+  </div>
+</div-->

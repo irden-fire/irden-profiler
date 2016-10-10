@@ -1,0 +1,34 @@
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+canvas {
+	background-image: radial-gradient(#666, #333);
+}
+
+#instructions {
+	position: absolute;
+	color: #fff;
+	bottom: 0;
+	padding-bottom: 6px;
+	font-family: sans-serif;
+	width: 100%;
+	text-align: center;
+	pointer-events: none;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content:center;
+    border: 2px dashed #FBC02D;
+    margin: 15px;
+}
+
+md-content{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 95%;
+}
