@@ -18,6 +18,8 @@ import expenseRoutes from './routes/_expense.router.js';
 
 import fileRoutes from './routes/_file-upload.router.js';
 
+import profileRoutes from './routes/_profile.router.js';
+
 export default (app, router, passport) => {
 
   // ### Express Middlware to use for all requests
@@ -62,6 +64,8 @@ export default (app, router, passport) => {
   expenseRoutes(app, router, auth);
 
   fileRoutes(app, router, auth);
+
+  profileRoutes(app, router, auth);
 
   // All of our routes will be prefixed with /api
   app.use('/api', router);
